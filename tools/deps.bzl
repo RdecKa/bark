@@ -65,19 +65,9 @@ def bark_dependencies():
       remote = "https://github.com/google/glog"
     )
 
-    # _maybe(
-    #   new_git_repository,
-    #   name = "rss_lib",
-    #   remote = "https://github.com/intel/ad-rss-lib.git",
-    #   tag = "v3.0.1",
-    #   init_submodules = True,
-    #   build_file = "@bark_project//tools/rss:rss.BUILD",
-    # )
-    
-
     _maybe(
     http_archive,
-    name = "ad_rss",
+    name = "ad_rss_lib",
     build_file = "@bark_project//tools/rss:rss.BUILD",
     sha256 = "b77c658434399815f02dd12ecf83e40f8bf015ca29a8407c4361a3b3b0c28eb7",
     strip_prefix = "ad-rss-lib-3.0.0",
@@ -94,8 +84,8 @@ def bark_dependencies():
 
     _maybe(
     http_archive,
-    name = "map",
-    build_file = "@bark_project//tools/rss:map.BUILD",
+    name = "ad_rss_map_support",
+    build_file = "@bark_project//tools/rss:ad_rss_map_support.BUILD",
     strip_prefix = "map-2.0.0",
     urls = ["https://github.com/carla-simulator/map/archive/v2.0.0.tar.gz"],
     )

@@ -50,8 +50,8 @@ cc_library(
     visibility = ["//visibility:public"],
     deps = [
         ":ad_rss",
-        "@map//:ad_map_access",
-        "@map//:ad_physics",
+        "@ad_rss_map_support//:ad_map_access",
+        "@ad_rss_map_support//:ad_physics",
     ],
 )
 
